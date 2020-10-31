@@ -9,12 +9,13 @@ LABEL org.label-schema.maintainer="Jakub 'Ash258' Čábera <cabera.jakub@gmail.c
 
 ARG SCOOP_REPO='https://github.com/Ash258/Scoop-Core.git'
 ARG SCOOP_BRANCH='main'
+ARG POWERSHELL='powershell.exe'
 
 ENV SCOOP="C:\SCOOP"
 
 COPY '.cache/*' "C:/SCOOP/cache/"
 
-RUN powershell.exe -NoLogo -NonInteractive -NoExit -Command " \
+RUN %POWERSHELL% -NoLogo -NonInteractive -NoExit -Command " \
     Set-ExecutionPolicy Bypass; \
     Invoke-WebRequest 'https://raw.githubusercontent.com/ScoopInstaller/Install/master/install.ps1' -OutFile 'install.ps1' -UseBasicParsing; \
     .\install.ps1 -RunAsAdmin; \
@@ -31,4 +32,4 @@ RUN powershell.exe -NoLogo -NonInteractive -NoExit -Command " \
     exit 0; \
     "
 
-ENTRYPOINT pwsh.exe -NoLogo -NoExit
+CMD [ "pwsh.exe", "-NoLogo", "-NoExit" ]
