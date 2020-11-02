@@ -1,5 +1,9 @@
 # [Shovel Docker images](https://hub.docker.com/u/shovelinstaller)
 
+## Production images
+
+Images intended as a base image for the production setups.
+
 | Tag                      |             Dockerfile             | OsVersion                                 |
 | :----------------------- | :--------------------------------: | :---------------------------------------- |
 | latest                   | [Dockerfile](./windows/Dockerfile) | Windows 2009 (10.0.19042.572)             |
@@ -15,17 +19,7 @@
 | windowsservercore-2004   | [Dockerfile](./windows/Dockerfile) | Windows Server Core 2004 (10.0.19041.572) |
 
 <!--
-## Production images
-
-Images intended as a base image for the production setups.
-
-### Windows
-
-### Servercore
-
-### Nanoserver
-
 ## Development images
 
-Images for local development and testing behaviour on multiple OS versions
+Images for local development and testing behaviour on multiple OS versions or Excavator execution
  -->
