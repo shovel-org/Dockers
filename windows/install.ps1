@@ -14,8 +14,13 @@ shovel install '7zip' 'mingit' 'gsudo' 'innounp' 'dark' 'pwsh' --global
 shovel config 'SCOOP_REPO' ${env:SCOOP_REPO}
 shovel update
 shovel config 'SCOOP_BRANCH' ${env:SCOOP_BRANCH}
+
+# Updates/migrations
 shovel update
 shovel status
+
+# Cleanup
 shovel cache rm '*'
+Remove-Item "$env:SCOOP\cache\*", "$env:TMP\*", "$env:TEMP\*" -ErrorAction 'SilentlyContinue' -Force -Recurse
 
 exit 0

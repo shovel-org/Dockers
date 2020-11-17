@@ -1,5 +1,5 @@
 ARG IMAGE='windows'
-ARG VERSION='2009'
+ARG VERSION='20H2'
 
 FROM mcr.microsoft.com/${IMAGE}:${VERSION} as windows
 
