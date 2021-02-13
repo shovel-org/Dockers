@@ -1,8 +1,9 @@
 #region Windows
-# shovel cache rm *; shovel download 7zip cwRsync dark EXEExplorer fiddler mingit git gsudo innounp lessmsi pwsh pwsh-preview RDPWrapper vim win32-openssh winget zstd; Copy-Item "$env:SCOOP\cache\*" '.\.cache' -Force
+# $env:SCOOP_CACHE="$PWD/.cache"; shovel update; shovel download 7zip zstd dark lessmsi gsudo innounp innoextract oh-my-posh3 posh-git cwRsync EXEExplorer fiddler RDPWrapper pwsh pwsh-preview vim win32-openssh winget zstd git mingit dotnet-sdk --skip
 Push-Location $PWD
-
-$image = 'shovelinstaller/shovel'
+$org = 'shovelinstaller'
+$image = "$org/shovel"
+$scoopImage = "$org/scoop"
 
 ## windows
 ### latest, windows, windows-latest, 20H2, windows-20H2
@@ -46,13 +47,22 @@ docker build `
     --file .\windows\Dockerfile `
     .
 
+docker build `
+    --tag "${image}:windowsservercore-1909" `
+    --build-arg 'IMAGE=powershell' `
+    --build-arg 'VERSION=windowsservercore-1909' `
+    --build-arg 'POWERSHELL=pwsh.exe' `
+    --no-cache `
+    --file .\windows\Dockerfile `
+    .
+
 ## just scoop windows latest for some verification runs
 docker build `
-    --tag 'shovelinstaller/scoop:latest' `
-    --tag 'shovelinstaller/scoop:windows' `
-    --tag 'shovelinstaller/scoop:windows-latest' `
-    --tag 'shovelinstaller/scoop:20H2' `
-    --tag 'shovelinstaller/scoop:windows-20H2' `
+    --tag "${scoopImage}:latest" `
+    --tag "${scoopImage}:windows" `
+    --tag "${scoopImage}:windows-latest" `
+    --tag "${scoopImage}:20H2" `
+    --tag "${scoopImage}:windows-20H2" `
     --build-arg 'SCOOP_REPO=https://github.com/lukesampson/scoop' `
     --build-arg 'SCOOP_BRANCH=master' `
     --no-cache `
