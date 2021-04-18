@@ -1,5 +1,7 @@
 $ErrorActionPreference = 'Stop'
 
+Set-ItemProperty 'HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem' -Name 'LongPathsEnabled' -Value 1
+
 # Shovel installation
 Invoke-WebRequest 'https://raw.githubusercontent.com/ScoopInstaller/Install/master/install.ps1' -OutFile "$env:TMP\install.ps1" -UseBasicParsing
 & "$env:TMP\install.ps1" -RunAsAdmin
