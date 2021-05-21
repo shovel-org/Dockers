@@ -1,6 +1,9 @@
 #region Windows
 # $env:SCOOP_CACHE="$PWD/.cache"; shovel update; shovel download 7zip zstd dark lessmsi gsudo innounp innoextract oh-my-posh3 posh-git cwRsync EXEExplorer fiddler RDPWrapper pwsh pwsh-preview vim win32-openssh winget zstd git mingit dotnet-sdk --skip
+$env:DOCKER_SCAN_SUGGEST = 'false'
+
 Push-Location $PWD
+
 $org = 'shovelinstaller'
 $image = "$org/shovel"
 $scoopImage = "$org/scoop"
@@ -75,4 +78,5 @@ docker build `
 
 #region Linux
 #endregion Linux
+
 Pop-Location

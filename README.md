@@ -6,18 +6,19 @@ Images intended as a base image for the production setups.
 
 <!-- https://hub.docker.com/_/microsoft-windows -->
 <!-- https://hub.docker.com/_/microsoft-powershell -->
+<!-- ./ https://github.com/Ash258/Scoop-Dockers/blob/ -->
 
 | Tag                      |             Dockerfile             | OsVersion                                  |
 | :----------------------- | :--------------------------------: | :----------------------------------------- |
-| latest                   | [Dockerfile](./windows/Dockerfile) | Windows 20H2 (10.0.19042.928)              |
-| windows                  | [Dockerfile](./windows/Dockerfile) | Windows 20H2 (10.0.19042.928)              |
-| windows-latest           | [Dockerfile](./windows/Dockerfile) | Windows 20H2 (10.0.19042.928)              |
-| 20H2                     | [Dockerfile](./windows/Dockerfile) | Windows 20H2 (10.0.19042.928)              |
-| windows-20H2             | [Dockerfile](./windows/Dockerfile) | Windows 20H2 (10.0.19042.928)              |
-| 2009                     | [Dockerfile](./windows/Dockerfile) | Windows 2009 (10.0.19042.928)              |
-| windows-2009             | [Dockerfile](./windows/Dockerfile) | Windows 2009 (10.0.19042.928)              |
-| 2004                     | [Dockerfile](./windows/Dockerfile) | Windows 2004 (10.0.19041.928)              |
-| windows-2004             | [Dockerfile](./windows/Dockerfile) | Windows 2004 (10.0.19041.928)              |
+| latest                   | [Dockerfile](./windows/Dockerfile) | Windows 20H2 (10.0.19042.985)              |
+| windows                  | [Dockerfile](./windows/Dockerfile) | Windows 20H2 (10.0.19042.985)              |
+| windows-latest           | [Dockerfile](./windows/Dockerfile) | Windows 20H2 (10.0.19042.985)              |
+| 20H2                     | [Dockerfile](./windows/Dockerfile) | Windows 20H2 (10.0.19042.985)              |
+| windows-20H2             | [Dockerfile](./windows/Dockerfile) | Windows 20H2 (10.0.19042.985)              |
+| 2009                     | [Dockerfile](./windows/Dockerfile) | Windows 2009 (10.0.19042.985)              |
+| windows-2009             | [Dockerfile](./windows/Dockerfile) | Windows 2009 (10.0.19042.985)              |
+| 2004                     | [Dockerfile](./windows/Dockerfile) | Windows 2004 (10.0.19041.985)              |
+| windows-2004             | [Dockerfile](./windows/Dockerfile) | Windows 2004 (10.0.19041.985)              |
 | ------------------------ | ---------------------------------- | -----------------------------------------  |
 | windowsservercore        | [Dockerfile](./windows/Dockerfile) | Windows Server Core 2004 (10.0.19041.928)  |
 | windowsservercore-latest | [Dockerfile](./windows/Dockerfile) | Windows Server Core 2004 (10.0.19041.928)  |
