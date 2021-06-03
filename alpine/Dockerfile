@@ -13,8 +13,8 @@ ENV USERPROFILE=/root
 RUN mkdir -p $SCOOP $SCOOP_GLOBAL $SCOOP/apps/scoop && \
     mkdir -p $SCOOP/shims $SCOOP_GLOBAL/shims ~/.config/scoop
 
-COPY shovel* $SCOOP/shims/
-COPY config.json ~/.config/scoop/
+COPY 'support/shovel*' $SCOOP/shims/
+COPY 'support/config.json' ~/.config/scoop/
 
 RUN chmod +x $SCOOP/shims/shovel $SCOOP/shims/shovel.ps1
 
