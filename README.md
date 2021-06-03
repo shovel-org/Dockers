@@ -25,8 +25,13 @@ Images intended as a base image for the production setups.
 | windowsservercore-2004   | [Dockerfile](./windows/Dockerfile) | Windows Server Core 2004 (10.0.19041.928)  |
 | windowsservercore-1909   | [Dockerfile](./windows/Dockerfile) | Windows Server Core 1909 (10.0.18363.1500) |
 
-<!--
 ## Development images
 
 Images for local development and testing behaviour on multiple OS versions or Excavator execution
- -->
+
+| Tag            |            Dockerfile             | OsVersion                                |
+| :------------- | :-------------------------------: | :--------------------------------------- |
+| latest         | [Dockerfile](./alpine/Dockerfile) | Alpine 3.12 (PowerShell 7.2.0-preview.6) |
+| alpine         | [Dockerfile](./alpine/Dockerfile) | Alpine 3.12 (PowerShell 7.2.0-preview.6) |
+| preview        | [Dockerfile](./alpine/Dockerfile) | Alpine 3.12 (PowerShell 7.2.0-preview.6) |
+| preview-alpine | [Dockerfile](./alpine/Dockerfile) | Alpine 3.12 (PowerShell 7.2.0-preview.6) |
