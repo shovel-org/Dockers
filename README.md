@@ -20,10 +20,10 @@ Images intended as a base image for the production setups.
 | 2004                     | [Dockerfile](./windows/Dockerfile) | Windows 2004 (10.0.19041.985)              |
 | windows-2004             | [Dockerfile](./windows/Dockerfile) | Windows 2004 (10.0.19041.985)              |
 | ------------------------ | ---------------------------------- | -----------------------------------------  |
-| windowsservercore        | [Dockerfile](./windows/Dockerfile) | Windows Server Core 2004 (10.0.19041.928)  |
-| windowsservercore-latest | [Dockerfile](./windows/Dockerfile) | Windows Server Core 2004 (10.0.19041.928)  |
-| windowsservercore-2004   | [Dockerfile](./windows/Dockerfile) | Windows Server Core 2004 (10.0.19041.928)  |
-| windowsservercore-1909   | [Dockerfile](./windows/Dockerfile) | Windows Server Core 1909 (10.0.18363.1500) |
+| windowsservercore        | [Dockerfile](./windows/Dockerfile) | Windows Server Core 2004 (10.0.19041.985)  |
+| windowsservercore-latest | [Dockerfile](./windows/Dockerfile) | Windows Server Core 2004 (10.0.19041.985)  |
+| windowsservercore-2004   | [Dockerfile](./windows/Dockerfile) | Windows Server Core 2004 (10.0.19041.985)  |
+| windowsservercore-1909   | [Dockerfile](./windows/Dockerfile) | Windows Server Core 1909 (10.0.18363.1556) |
 
 ## Development images
 

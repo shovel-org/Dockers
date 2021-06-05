@@ -1,5 +1,9 @@
 FROM mcr.microsoft.com/powershell:preview-debian-11
 
+LABEL org.label-schema.maintainer="Jakub 'Ash258' Čábera <cabera.jakub@gmail.com>" \
+    org.label-schema.description="Shovel docker image" \
+    org.label-schema.url="https://github.com/Ash258/Scoop-Core"
+
 # [Option] Install zsh
 ARG INSTALL_ZSH="true"
 # [Option] Upgrade OS packages to their latest versions
