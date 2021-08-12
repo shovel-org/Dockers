@@ -10,19 +10,19 @@ Images intended as a base image for the production setups.
 
 | Tag                      |             Dockerfile             | OsVersion                                  |
 | :----------------------- | :--------------------------------: | :----------------------------------------- |
-| latest                   | [Dockerfile](./windows/Dockerfile) | Windows 20H2 (10.0.19042.1110)             |
-| windows                  | [Dockerfile](./windows/Dockerfile) | Windows 20H2 (10.0.19042.1110)             |
-| windows-latest           | [Dockerfile](./windows/Dockerfile) | Windows 20H2 (10.0.19042.1110)             |
-| 20H2                     | [Dockerfile](./windows/Dockerfile) | Windows 20H2 (10.0.19042.1110)             |
-| windows-20H2             | [Dockerfile](./windows/Dockerfile) | Windows 20H2 (10.0.19042.1110)             |
-| 2009                     | [Dockerfile](./windows/Dockerfile) | Windows 2009 (10.0.19042.1110)             |
-| windows-2009             | [Dockerfile](./windows/Dockerfile) | Windows 2009 (10.0.19042.1110)             |
-| 2004                     | [Dockerfile](./windows/Dockerfile) | Windows 2004 (10.0.19041.1110)             |
-| windows-2004             | [Dockerfile](./windows/Dockerfile) | Windows 2004 (10.0.19041.1110)             |
-| ------------------------ | ---------------------------------- | -----------------------------------------  |
-| windowsservercore        | [Dockerfile](./windows/Dockerfile) | Windows Server Core 2004 (10.0.19041.1052) |
-| windowsservercore-latest | [Dockerfile](./windows/Dockerfile) | Windows Server Core 2004 (10.0.19041.1052) |
-| windowsservercore-2004   | [Dockerfile](./windows/Dockerfile) | Windows Server Core 2004 (10.0.19041.1052) |
+| latest                   | [Dockerfile](./windows/Dockerfile) | Windows 20H2 (10.0.19042.1165)             |
+| windows                  | [Dockerfile](./windows/Dockerfile) | Windows 20H2 (10.0.19042.1165)             |
+| windows-latest           | [Dockerfile](./windows/Dockerfile) | Windows 20H2 (10.0.19042.1165)             |
+| 20H2                     | [Dockerfile](./windows/Dockerfile) | Windows 20H2 (10.0.19042.1165)             |
+| windows-20H2             | [Dockerfile](./windows/Dockerfile) | Windows 20H2 (10.0.19042.1165)             |
+| 2009                     | [Dockerfile](./windows/Dockerfile) | Windows 2009 (10.0.19042.1165)             |
+| windows-2009             | [Dockerfile](./windows/Dockerfile) | Windows 2009 (10.0.19042.1165)             |
+| 2004                     | [Dockerfile](./windows/Dockerfile) | Windows 2004 (10.0.19041.1165)             |
+| windows-2004             | [Dockerfile](./windows/Dockerfile) | Windows 2004 (10.0.19041.1165)             |
+| ------------------------ | ---------------------------------- | ------------------------------------------ |
+| windowsservercore        | [Dockerfile](./windows/Dockerfile) | Windows Server Core 2004 (10.0.19041.1110) |
+| windowsservercore-latest | [Dockerfile](./windows/Dockerfile) | Windows Server Core 2004 (10.0.19041.1110) |
+| windowsservercore-2004   | [Dockerfile](./windows/Dockerfile) | Windows Server Core 2004 (10.0.19041.1110) |
 | windowsservercore-1909   | [Dockerfile](./windows/Dockerfile) | Windows Server Core 1909 (10.0.18363.1556) |
 
 ## Development images
