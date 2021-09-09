@@ -8,8 +8,8 @@ ARG SCOOP_BRANCH='main'
 
 ENV SHELL='/bin/sh'
 ENV USERPROFILE='/root'
-ENV SCOOP="$USERPROFILE/shovel"
-ENV SCOOP_GLOBAL='/opt/shovel'
+ENV SCOOP="$USERPROFILE/Shovel"
+ENV SCOOP_GLOBAL='/opt/Shovel'
 ENV SCOOP_HOME="$SCOOP/apps/scoop/current"
 ENV PATH="$SCOOP/shims:$SCOOP_GLOBAL/shims:$PATH"
 
@@ -24,17 +24,18 @@ RUN apk update && apk add git p7zip --virtual shovelDeps
 
 # Install Shovel
 RUN chmod +x "$SCOOP/shims/shovel" "$SCOOP/shims/shovel.ps1" && \
-    wget -q 'https://github.com/Ash258/Scoop-Core/archive/main.zip' && \
-    unzip -q main.zip && \
-    mv Scoop-Core-main "$SCOOP_HOME/" && \
-    rm -rf main.zip && \
+    wget -q "https://github.com/Ash258/Scoop-Core/archive/$SCOOP_BRANCH.zip" && \
+    unzip -q "$SCOOP_BRANCH.zip" && \
+    mv "Scoop-Core-$SCOOP_BRANCH" "$SCOOP_HOME/" && \
+    rm -rf "$SCOOP_BRANCH.zip" && \
     wget -q 'https://github.com/ScoopInstaller/Main/archive/master.zip' && \
-    unzip -q master.zip && \
-    mv Main-master "$SCOOP/buckets/main" && \
-    rm -rf master.zip
+    unzip -q 'master.zip' && \
+    mv 'Main-master' "$SCOOP/buckets/main" && \
+    rm -rf 'master.zip'
 
 # Checkup and other tweaks
-RUN shovel config SCOOP_BRANCH $SCOOP_BRANCH && \
+RUN shovel config SCOOP_BRANCH "$SCOOP_BRANCH" && \
+    shovel bucket add 'Base' 'https://github.com/shovel-org/Base.git' && \
     shovel update && \
     shovel status && \
     shovel -v
