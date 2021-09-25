@@ -1,7 +1,7 @@
 FROM mcr.microsoft.com/powershell:preview-alpine-3.12
 
 LABEL org.label-schema.maintainer="Jakub 'Ash258' Čábera <cabera.jakub@gmail.com>" \
-    org.label-schema.description='Shovel docker image' \
+    org.label-schema.description='Alpine based Shovel docker image for linux compatibility testing' \
     org.label-schema.url='https://github.com/Ash258/Scoop-Core'
 
 ARG SCOOP_BRANCH='main'

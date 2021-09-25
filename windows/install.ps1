@@ -1,3 +1,4 @@
+$PSNativeCommandArgumentPassing = 'Legacy'
 $ErrorActionPreference = 'Stop'
 $ProgressPreference = 'SilentlyContinue'
 
@@ -23,6 +24,8 @@ shovel install --global '7zip' 'mingit' 'gsudo' 'innounp' 'dark' 'pwsh' 'zstd'
 shovel config 'SCOOP_REPO' ${env:SCOOP_REPO}
 shovel update
 shovel config 'SCOOP_BRANCH' ${env:SCOOP_BRANCH}
+
+shovel bucket add Base 'https://github.com/shovel-org/Base.git'
 
 # Updates/migrations
 shovel update
