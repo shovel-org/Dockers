@@ -74,6 +74,8 @@ docker build `
 
 # docker push 'shovelinstaller/shovel' --all-tags
 # docker push 'shovelinstaller/scoop' --all-tags
+# (docker inspect mcr.microsoft.com/windows:2004 | ConvertFrom-Json).OsVersion | clip
+# (docker inspect mcr.microsoft.com/powershell:windowsservercore-2004 | ConvertFrom-Json).OsVersion | clip
 #endregion Windows
 
 #region Linux
