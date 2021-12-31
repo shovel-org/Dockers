@@ -6,7 +6,7 @@ Images intended as a base image for the production setups.
 
 <!-- https://hub.docker.com/_/microsoft-windows -->
 <!-- https://hub.docker.com/_/microsoft-powershell -->
-<!-- ./ https://github.com/Ash258/Scoop-Dockers/blob/ -->
+<!-- ./ https://github.com/shovel-org/Dockers/blob/ -->
 
 <!-- (docker inspect mcr.microsoft.com/windows:2004 | ConvertFrom-Json).OsVersion | clip -->
 <!-- (docker inspect mcr.microsoft.com/powershell:windowsservercore-1909 | ConvertFrom-Json).OsVersion | clip -->
@@ -23,24 +23,24 @@ Images intended as a base image for the production setups.
 | 2004                     | [Dockerfile](./windows/Dockerfile) | Windows 2004 (10.0.19041.1415)             |
 | windows-2004             | [Dockerfile](./windows/Dockerfile) | Windows 2004 (10.0.19041.1415)             |
 | ------------------------ | ---------------------------------- | -----------------------------------------  |
-| windowsservercore        | [Dockerfile](./windows/Dockerfile) | Windows Server Core 2004 (10.0.19041.1348) |
-| windowsservercore-latest | [Dockerfile](./windows/Dockerfile) | Windows Server Core 2004 (10.0.19041.1348) |
-| windowsservercore-2004   | [Dockerfile](./windows/Dockerfile) | Windows Server Core 2004 (10.0.19041.1348) |
+| windowsservercore        | [Dockerfile](./windows/Dockerfile) | Windows Server Core 2004 (10.0.19041.1415) |
+| windowsservercore-latest | [Dockerfile](./windows/Dockerfile) | Windows Server Core 2004 (10.0.19041.1415) |
+| windowsservercore-2004   | [Dockerfile](./windows/Dockerfile) | Windows Server Core 2004 (10.0.19041.1415) |
 | windowsservercore-1909   | [Dockerfile](./windows/Dockerfile) | Windows Server Core 1909 (10.0.18363.1556) |
 
 ## Development images
 
 Images for local development and testing behaviour on multiple OS versions or Excavator execution
 
-| Tag                                   |                Dockerfile                | OsVersion                           |
-| :------------------------------------ | :--------------------------------------: | :---------------------------------- |
-| [shovel-dev] latest                   |    [Dockerfile](./alpine/Dockerfile)     | Alpine 3.13 (PowerShell 7.2.0-rc.1) |
-| [shovel-dev] alpine                   |    [Dockerfile](./alpine/Dockerfile)     | Alpine 3.13 (PowerShell 7.2.0-rc.1) |
-| [shovel-dev] preview                  |    [Dockerfile](./alpine/Dockerfile)     | Alpine 3.13 (PowerShell 7.2.0-rc.1) |
-| [shovel-dev] preview-alpine           |    [Dockerfile](./alpine/Dockerfile)     | Alpine 3.13 (PowerShell 7.2.0-rc.1) |
-| ------------------------------------- | ---------------------------------------- | ----------------------------------- |
-| [shovel-dev] container                | [Dockerfile](./dev-container/Dockerfile) | Debian 11 (PowerShell 7.2.0-rc.1)   |
-| [shovel-dev] container-latest         | [Dockerfile](./dev-container/Dockerfile) | Debian 11 (PowerShell 7.2.0-rc.1)   |
-| [shovel-dev] container-preview        | [Dockerfile](./dev-container/Dockerfile) | Debian 11 (PowerShell 7.2.0-rc.1)   |
-| [shovel-dev] container-debian         | [Dockerfile](./dev-container/Dockerfile) | Debian 11 (PowerShell 7.2.0-rc.1)   |
-| [shovel-dev] container-debian-preview | [Dockerfile](./dev-container/Dockerfile) | Debian 11 (PowerShell 7.2.0-rc.1)   |
+| Tag                                   |                Dockerfile                | OsVersion                                |
+| :------------------------------------ | :--------------------------------------: | :--------------------------------------- |
+| [shovel-dev] latest                   |    [Dockerfile](./alpine/Dockerfile)     | Alpine 3.14 (PowerShell 7.3.0-preview.1) |
+| [shovel-dev] alpine                   |    [Dockerfile](./alpine/Dockerfile)     | Alpine 3.14 (PowerShell 7.3.0-preview.1) |
+| [shovel-dev] preview                  |    [Dockerfile](./alpine/Dockerfile)     | Alpine 3.14 (PowerShell 7.3.0-preview.1) |
+| [shovel-dev] preview-alpine           |    [Dockerfile](./alpine/Dockerfile)     | Alpine 3.14 (PowerShell 7.3.0-preview.1) |
+| ------------------------------------- | ---------------------------------------- | -----------------------------------      |
+| [shovel-dev] container                | [Dockerfile](./dev-container/Dockerfile) | Debian 11 (PowerShell 7.3.0-preview.1)   |
+| [shovel-dev] container-latest         | [Dockerfile](./dev-container/Dockerfile) | Debian 11 (PowerShell 7.3.0-preview.1)   |
+| [shovel-dev] container-preview        | [Dockerfile](./dev-container/Dockerfile) | Debian 11 (PowerShell 7.3.0-preview.1)   |
+| [shovel-dev] container-debian         | [Dockerfile](./dev-container/Dockerfile) | Debian 11 (PowerShell 7.3.0-preview.1)   |
+| [shovel-dev] container-debian-preview | [Dockerfile](./dev-container/Dockerfile) | Debian 11 (PowerShell 7.3.0-preview.1)   |

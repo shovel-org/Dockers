@@ -16,8 +16,8 @@ docker build `
     --tag "${image}:windows-latest" `
     --tag "${image}:20H2" `
     --tag "${image}:windows-20H2" `
-    --no-cache `
     --file .\windows\Dockerfile `
+    --no-cache `
     .
 
 ### 2009, windows-2009
@@ -34,8 +34,8 @@ docker build `
     --tag "${image}:2004" `
     --tag "${image}:windows-2004" `
     --build-arg 'VERSION=2004' `
-    --no-cache `
     --file .\windows\Dockerfile `
+    --no-cache `
     .
 
 ##servercore
@@ -46,8 +46,8 @@ docker build `
     --build-arg 'IMAGE=powershell' `
     --build-arg 'VERSION=windowsservercore-2004' `
     --build-arg 'POWERSHELL=pwsh.exe' `
-    --no-cache `
     --file .\windows\Dockerfile `
+    --no-cache `
     .
 
 docker build `
@@ -55,8 +55,8 @@ docker build `
     --build-arg 'IMAGE=powershell' `
     --build-arg 'VERSION=windowsservercore-1909' `
     --build-arg 'POWERSHELL=pwsh.exe' `
-    --no-cache `
     --file .\windows\Dockerfile `
+    --no-cache `
     .
 
 ## just scoop windows latest for some verification runs
@@ -66,10 +66,10 @@ docker build `
     --tag "${scoopImage}:windows-latest" `
     --tag "${scoopImage}:20H2" `
     --tag "${scoopImage}:windows-20H2" `
-    --build-arg 'SCOOP_REPO=https://github.com/lukesampson/scoop' `
+    --build-arg 'SCOOP_REPO=https://github.com/ScoopInstaller/Scoop' `
     --build-arg 'SCOOP_BRANCH=master' `
-    --no-cache `
     --file .\windows\Dockerfile `
+    --no-cache `
     .
 
 # docker push 'shovelinstaller/shovel' --all-tags
@@ -78,7 +78,34 @@ docker build `
 # (docker inspect mcr.microsoft.com/powershell:windowsservercore-2004 | ConvertFrom-Json).OsVersion | clip
 #endregion Windows
 
-#region Linux
-#endregion Linux
-
 Pop-Location
+exit 0
+
+#region Linux
+$image = "$org/shovel-dev"
+
+# shovel-dev
+docker build `
+    --tag "${image}:latest" `
+    --tag "${image}:alpine" `
+    --tag "${image}:preview" `
+    --tag "${image}:preview-alpine" `
+    --build-arg 'SCOOP_BRANCH=NEW' `
+    --platform 'linux/amd64' `
+    --file .\alpine\Dockerfile `
+    --no-cache `
+    .
+
+# shovel-dev container
+docker build `
+    --tag "${image}:container" `
+    --tag "${image}:container-latest" `
+    --tag "${image}:container-preview" `
+    --tag "${image}:container-debian" `
+    --tag "${image}:container-debian-preview" `
+    --build-arg 'SCOOP_BRANCH=NEW' `
+    --platform 'linux/amd64' `
+    --file .\dev-container\Dockerfile `
+    --no-cache `
+    .
+#endregion Linux
