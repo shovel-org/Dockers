@@ -1,4 +1,5 @@
-FROM mcr.microsoft.com/powershell:preview-alpine-3.14
+ARG IMAGE=preview-debian-11
+FROM mcr.microsoft.com/powershell:${IMAGE}
 
 LABEL org.label-schema.maintainer="Jakub 'Ash258' Čábera <cabera.jakub@gmail.com>" \
     org.label-schema.description='Alpine based Shovel docker image for linux compatibility testing' \
@@ -6,7 +7,7 @@ LABEL org.label-schema.maintainer="Jakub 'Ash258' Čábera <cabera.jakub@gmail.c
 
 ARG SCOOP_BRANCH='main'
 
-ENV SHELL='/bin/sh'
+ENV SHELL='/bin/bash'
 ENV USERPROFILE='/root'
 ENV SCOOP="$USERPROFILE/Shovel"
 ENV SCOOP_GLOBAL='/opt/Shovel'
@@ -20,7 +21,7 @@ COPY 'support/shovel*' "$SCOOP/shims/"
 COPY 'support/config.json' '~/.config/scoop/'
 
 # Install basic dependencies
-RUN apk update && apk add git p7zip --virtual shovelDeps
+RUN apt-get update && apt-get install -y p7zip-full wget unzip git
 
 # Install Shovel
 RUN chmod +x "$SCOOP/shims/shovel" "$SCOOP/shims/shovel.ps1" && \

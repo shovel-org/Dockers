@@ -32,15 +32,20 @@ Images intended as a base image for the production setups.
 
 Images for local development and testing behaviour on multiple OS versions or Excavator execution
 
-| Tag                                   |                Dockerfile                | OsVersion                                |
-| :------------------------------------ | :--------------------------------------: | :--------------------------------------- |
-| [shovel-dev] latest                   |    [Dockerfile](./alpine/Dockerfile)     | Alpine 3.14 (PowerShell 7.3.0-preview.1) |
-| [shovel-dev] alpine                   |    [Dockerfile](./alpine/Dockerfile)     | Alpine 3.14 (PowerShell 7.3.0-preview.1) |
-| [shovel-dev] preview                  |    [Dockerfile](./alpine/Dockerfile)     | Alpine 3.14 (PowerShell 7.3.0-preview.1) |
-| [shovel-dev] preview-alpine           |    [Dockerfile](./alpine/Dockerfile)     | Alpine 3.14 (PowerShell 7.3.0-preview.1) |
-| ------------------------------------- | ---------------------------------------- | -----------------------------------      |
-| [shovel-dev] container                | [Dockerfile](./dev-container/Dockerfile) | Debian 11 (PowerShell 7.3.0-preview.1)   |
-| [shovel-dev] container-latest         | [Dockerfile](./dev-container/Dockerfile) | Debian 11 (PowerShell 7.3.0-preview.1)   |
-| [shovel-dev] container-preview        | [Dockerfile](./dev-container/Dockerfile) | Debian 11 (PowerShell 7.3.0-preview.1)   |
-| [shovel-dev] container-debian         | [Dockerfile](./dev-container/Dockerfile) | Debian 11 (PowerShell 7.3.0-preview.1)   |
-| [shovel-dev] container-debian-preview | [Dockerfile](./dev-container/Dockerfile) | Debian 11 (PowerShell 7.3.0-preview.1)   |
+| Tag                                   |                Dockerfile                | OsVersion                                 |
+| :------------------------------------ | :--------------------------------------: | :---------------------------------------- |
+| [shovel-dev] latest                   |    [Dockerfile](./alpine/Dockerfile)     | Alpine 3.14 (PowerShell 7.3.0-preview.1)  |
+| [shovel-dev] alpine                   |    [Dockerfile](./alpine/Dockerfile)     | Alpine 3.14 (PowerShell 7.3.0-preview.1)  |
+| [shovel-dev] preview                  |    [Dockerfile](./alpine/Dockerfile)     | Alpine 3.14 (PowerShell 7.3.0-preview.1)  |
+| [shovel-dev] preview-alpine           |    [Dockerfile](./alpine/Dockerfile)     | Alpine 3.14 (PowerShell 7.3.0-preview.1)  |
+| ------------------------------------- | ---------------------------------------- | ----------------------------------------- |
+| [shovel-dev] ubuntu                   |    [Dockerfile](./debian/Dockerfile)     | Ubuntu 20.04 (PowerShell 7.3.0-preview.1) |
+| [shovel-dev] preview-ubuntu           |    [Dockerfile](./debian/Dockerfile)     | Ubuntu 20.04 (PowerShell 7.3.0-preview.1) |
+| [shovel-dev] debian                   |    [Dockerfile](./debian/Dockerfile)     | Debian 11 (PowerShell 7.3.0-preview.1)    |
+| [shovel-dev] preview-debian           |    [Dockerfile](./debian/Dockerfile)     | Debian 11 (PowerShell 7.3.0-preview.1)    |
+| ------------------------------------- | ---------------------------------------- | ----------------------------------------- |
+| [shovel-dev] container                | [Dockerfile](./dev-container/Dockerfile) | Debian 11 (PowerShell 7.3.0-preview.1)    |
+| [shovel-dev] container-latest         | [Dockerfile](./dev-container/Dockerfile) | Debian 11 (PowerShell 7.3.0-preview.1)    |
+| [shovel-dev] container-preview        | [Dockerfile](./dev-container/Dockerfile) | Debian 11 (PowerShell 7.3.0-preview.1)    |
+| [shovel-dev] container-debian         | [Dockerfile](./dev-container/Dockerfile) | Debian 11 (PowerShell 7.3.0-preview.1)    |
+| [shovel-dev] container-debian-preview | [Dockerfile](./dev-container/Dockerfile) | Debian 11 (PowerShell 7.3.0-preview.1)    |
