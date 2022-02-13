@@ -1,3 +1,3 @@
 #!/usr/bin/env sh
 
-pwsh -ExecutionPolicy Unrestricted -NoLogo "$(dirname $0)/../apps/scoop/current/bin/scoop.ps1" "$@"
+pwsh -ExecutionPolicy Unrestricted -NoProfile -NoLogo "$(dirname $0)/../apps/scoop/current/bin/scoop.ps1" "$@"
