@@ -8,6 +8,20 @@ $org = 'shovelinstaller'
 $image = "$org/shovel"
 $scoopImage = "$org/scoop"
 
+# --tag "${image}:nanoserver" `
+# --tag "${image}:nanoserver-latest" `
+# --tag "${image}:nanoserver-2004" `
+docker build `
+    --build-arg 'IMAGE=powershell' `
+    --build-arg 'VERSION=nanoserver-2004' `
+    --build-arg 'POWERSHELL=pwsh.exe' `
+    --build-arg 'SKIP_ROBOCOPY=true' `
+    --file .\windows\Dockerfile `
+    --no-cache `
+    .
+
+exit 0
+
 ## windows
 ### latest, windows, windows-latest, 20H2, windows-20H2
 docker build `
@@ -20,13 +34,15 @@ docker build `
     --no-cache `
     .
 
+exit 0
+
 ### 2009, windows-2009
 docker build `
     --tag "${image}:2009" `
     --tag "${image}:windows-2009" `
     --build-arg 'VERSION=2009' `
-    --no-cache `
     --file .\windows\Dockerfile `
+    --no-cache `
     .
 
 ### 2004, windows-2004
@@ -38,7 +54,8 @@ docker build `
     --no-cache `
     .
 
-##servercore
+## servercore
+### windowsservercore, windowsservercore-latest, windowsservercore-2004
 docker build `
     --tag "${image}:windowsservercore" `
     --tag "${image}:windowsservercore-latest" `
@@ -50,11 +67,25 @@ docker build `
     --no-cache `
     .
 
+### windowsservercore-1909
 docker build `
     --tag "${image}:windowsservercore-1909" `
     --build-arg 'IMAGE=powershell' `
     --build-arg 'VERSION=windowsservercore-1909' `
     --build-arg 'POWERSHELL=pwsh.exe' `
+    --file .\windows\Dockerfile `
+    --no-cache `
+    .
+
+### nanoserver, nanoserver-latest, nanoserver-2004
+docker build `
+    --tag "${image}:nanoserver" `
+    --tag "${image}:nanoserver-latest" `
+    --tag "${image}:nanoserver-2004" `
+    --build-arg 'IMAGE=powershell' `
+    --build-arg 'VERSION=nanoserver-2004' `
+    --build-arg 'POWERSHELL=pwsh.exe' `
+    --build-arg 'SKIP_ROBOCOPY=1' `
     --file .\windows\Dockerfile `
     --no-cache `
     .
